@@ -9,8 +9,4 @@
       { name: 'superman', phone_numbr: '5055055505', comics_affiliation: 'superman', image_url: 'https://static.comicvine.com/uploads/original/11111/111113523/3605753-1936874063-31646.png'}
     ]
   }
-})
-
-function all() {
-  return superheroes
-}
+})()

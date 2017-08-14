@@ -8,13 +8,17 @@
   <script src="app.js"></script>
 </head>
 <body ng-app="superheroesApp" ng-controller="SuperheroesController as vm">
-    <input type="text"  ng-model="searchBox">
-
+  <input type="text" ng-model="vm.search">
+  <p>{{vm.search}}</p>
   <ul>
-    <h3>Superheroes</h3>
-    <li ng-repeat="superhereo | filter: searchBox">
-
-      {{superheroes.name + ' : ' superheroes.phone_numbr}}
+    <h3>Superheroes:</h3>
+    <li ng-repeat="superhero in vm.superheroes | filter: vm.search ">
+      <!--
+      <% @superheroes.each do |superhero| %>
+        <li><%= superhero.name + ' : ' + superhero.phone_numbr %> </li>
+      <% end %>
+     -->
+      {{superhero.name + ' : ' + superhero.phone_numbr}}
     </li>
   </ul>
 </body>
